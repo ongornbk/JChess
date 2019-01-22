@@ -5,10 +5,11 @@ import Players.PlayerColor;
 public class Rook implements IPawn {
 
     private PlayerColor m_color;
+    private Engine.Graphics.Image m_image;
 
-    public Rook(PlayerColor color)
-    {
+    public Rook(PlayerColor color,Engine.Graphics.Image image,Engine.Core.Point2D<Integer> position) {
         m_color = color;
+        m_image = new Engine.Graphics.Image(image,position);
     }
 
     @Override
@@ -23,7 +24,7 @@ public class Rook implements IPawn {
 
     @Override
     public void Render() {
-
+        Engine.Graphics.Renderer.getInstance().Push(m_image);
     }
 
 }

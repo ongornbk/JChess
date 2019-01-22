@@ -59,6 +59,12 @@ catch (Exception e)
         ResourceImage pawn_white = new ResourceImage("pawn_white.png");
         m_resources.PushResource("pawn_white.png",pawn_white);
 
+        ResourceImage rook_black = new ResourceImage("rook_black.png");
+        m_resources.PushResource("rook_black.png",rook_black);
+
+        ResourceImage rook_white = new ResourceImage("rook_white.png");
+        m_resources.PushResource("rook_white.png",rook_white);
+
     }
 
     public void run()
