@@ -119,6 +119,8 @@ catch (Exception e)
 
         Graphics gs = bs.getDrawGraphics();
 
+        Engine.Graphics.Image.SetGraphics(gs);
+
         gs.setColor(new Color(22,33,45));
         gs.fillRect(0,0,800,600);
 
