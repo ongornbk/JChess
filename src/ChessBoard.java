@@ -1,4 +1,5 @@
 
+import Engine.Core.Point2D;
 import Engine.Graphics.Image;
 import Engine.ResourceImage;
 import Engine.ResourceManager;
@@ -15,7 +16,7 @@ public ChessBoard()
     ResourceManager m_resources = Engine.ResourceManager.getInstance();
 
     Engine.Graphics.Image pawn_black = new Engine.Graphics.Image(((ResourceImage)m_resources.GetResource("pawn_black.png")).Load());
-
+    Engine.Graphics.Image pawn_white = new Engine.Graphics.Image(((ResourceImage)m_resources.GetResource("pawn_white.png")).Load());
 
 
     m_board = new IPawn[8][8];
@@ -40,12 +41,12 @@ public ChessBoard()
 
     for(int i = 0;i < 8;i++)
     {
-        m_board[i][1] = new Pawn(PlayerColor.WHITE,pawn_black);
+        m_board[i][1] = new Pawn(PlayerColor.WHITE,pawn_white,new Engine.Core.Point2D<Integer>(i * 100,600));
         m_board[i][2] = new Empty();
         m_board[i][3] = new Empty();
         m_board[i][4] = new Empty();
         m_board[i][5] = new Empty();
-        m_board[i][6] = new Pawn(PlayerColor.BLACK,pawn_black);
+        m_board[i][6] = new Pawn(PlayerColor.BLACK,pawn_black,new Engine.Core.Point2D<Integer>(i * 100,100));
     }
 }
 

@@ -17,7 +17,7 @@ private ResourceManager m_resources = Engine.ResourceManager.getInstance();
 
 public Game ()
 {
-    new Window(800,600,"Chess Game Java Project",this);
+    new Window(800,800,"Chess Game Java Project",this);
 }
 
     public static void main(String args[]){
@@ -55,6 +55,9 @@ catch (Exception e)
 
         ResourceImage pawn_black = new ResourceImage("pawn_black.png");
         m_resources.PushResource("pawn_black.png",pawn_black);
+
+        ResourceImage pawn_white = new ResourceImage("pawn_white.png");
+        m_resources.PushResource("pawn_white.png",pawn_white);
 
     }
 
@@ -121,8 +124,22 @@ catch (Exception e)
 
         Engine.Graphics.Image.SetGraphics(gs);
 
-        gs.setColor(new Color(22,33,45));
-        gs.fillRect(0,0,800,600);
+        gs.setColor(new Color(133,133,145));
+
+        for(int i = 0;i < 8;i++)
+        {
+            for(int j = 0;j < 8;j++)
+            {
+                if(((i+j)%2)==0)
+                    gs.setColor(new Color(133,133,145));
+                else
+                    gs.setColor(new Color(55,44,45));
+
+                gs.fillRect(i*100,j* 100,100,100);
+            }
+        }
+
+
 
         m_board.Render();
 
