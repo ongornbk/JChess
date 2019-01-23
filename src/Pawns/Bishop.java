@@ -6,9 +6,11 @@ public class Bishop implements IPawn {
 
 private PlayerColor m_color;
 
-    public Bishop(PlayerColor color)
-    {
-m_color = color;
+private Engine.Graphics.Image m_image;
+
+    public Bishop(PlayerColor color,Engine.Graphics.Image image,Engine.Core.Point2D<Integer> position) {
+        m_color = color;
+        m_image = new Engine.Graphics.Image(image,position);
     }
 
     @Override
@@ -23,7 +25,7 @@ m_color = color;
 
     @Override
     public void Render() {
-
+        Engine.Graphics.Renderer.getInstance().Push(m_image);
     }
 
 }

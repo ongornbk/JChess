@@ -65,6 +65,12 @@ catch (Exception e)
         ResourceImage rook_white = new ResourceImage("rook_white.png");
         m_resources.PushResource("rook_white.png",rook_white);
 
+        ResourceImage bishop_black = new ResourceImage("bishop_black.png");
+        m_resources.PushResource("bishop_black.png",bishop_black);
+
+        ResourceImage bishop_white = new ResourceImage("bishop_white.png");
+        m_resources.PushResource("bishop_white.png",bishop_white);
+
     }
 
     public void run()
