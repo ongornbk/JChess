@@ -77,6 +77,18 @@ catch (Exception e)
         ResourceImage king_white = new ResourceImage("king_white.png");
         m_resources.PushResource("king_white.png",king_white);
 
+        ResourceImage knight_black = new ResourceImage("knight_black.png");
+        m_resources.PushResource("knight_black.png",knight_black);
+
+        ResourceImage knight_white = new ResourceImage("knight_white.png");
+        m_resources.PushResource("knight_white.png",knight_white);
+
+        ResourceImage queen_black = new ResourceImage("queen_black.png");
+        m_resources.PushResource("queen_black.png",queen_black);
+
+        ResourceImage queen_white = new ResourceImage("queen_white.png");
+        m_resources.PushResource("queen_white.png",queen_white);
+
     }
 
     public void run()
